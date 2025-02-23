@@ -14,9 +14,9 @@ class CommandHandler:
                 return await self.take(self.args[0] if self.args else None)
             case 'inv' | 'inventory':
                 return await self.inventory()
-            case "take jack for a walk":
+            case "take_jack_for_a_walk":
                 return "Jack is excited. Where do you take him?"
-            case "Friesenstraße" | "Pvh" | "große Runde":
+            case "friesenstraße" | "pvh" | "große_runde":
                 return "You´re walking down the street. Oh no! There is a dog at the other side of the road. What do you do?"
             case "hide":
                 return "Jack noticed that somethings foul ans started to bark."
