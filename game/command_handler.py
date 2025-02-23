@@ -15,13 +15,16 @@ class CommandHandler:
             case 'inv' | 'inventory':
                 return await self.inventory()
             case "take jack for a walk":
-            return "Jack is excited. Where do you take him?"
-            case "Friesenstraße" | "Pvh" | "große Runde"
+                return "Jack is excited. Where do you take him?"
+            case "Friesenstraße" | "Pvh" | "große Runde":
                 return "You´re walking down the street. Oh no! There is a dog at the other side of the road. What do you do?"
-            case "Hide"
+            case "hide":
                 return "Jack noticed that somethings foul ans started to bark."
-            case "act normal"
-                return "Jack didn´t even care, sniffed at something and did his business. Yay!"
+            case "act":
+                if self.args[0] == "normal":
+                    return "Jack didn´t even care, sniffed at something and did his business. Yay!"
+                else:
+                    return "Command not complete, try 'act normal'"
             case "greetings":
                 return "Hello dear friend, long time no see."
             case _:
