@@ -14,6 +14,8 @@ class CommandHandler:
                 return await self.take(self.args[0] if self.args else None)
             case 'inv' | 'inventory':
                 return await self.inventory()
+            case "greetings":
+                return "Hello dear friend, long time no see."
             case _:
                 return "Unknown command. Try 'look', '[direction]', 'take [item]', or 'inventory'."
 
